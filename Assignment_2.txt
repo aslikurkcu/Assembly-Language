@@ -1,0 +1,46 @@
+	ORG		$100
+
+	LDAA 	#8
+	STAA	$0
+	LDAA 	#14
+	STAA	$1
+	LDAA 	#6
+	STAA	$2
+	LDAA 	#16
+	STAA	$3
+	LDAA 	#16
+	STAA	$4
+	LDAA 	#5
+	STAA	$5
+	LDAA 	#10
+	STAA	$6
+	LDAA 	#16
+	STAA	$7
+	LDAA 	#4
+	STAA	$8
+	LDAA 	#11
+	STAA	$9
+
+	
+	LDX		#$0
+	LDAB	#10
+	LDAA	0,X
+	STAA	$70
+
+L1	LDAA	1,X
+	CMPA	$70
+	BGE		if
+	INX
+	DECB
+	BNE		L1	
+	BRA		XX
+
+if	STAA	$70
+	INX
+	DECB
+	BNE		L1
+	BRA		XX
+	
+
+XX	END
+	
