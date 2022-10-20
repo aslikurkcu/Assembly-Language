@@ -1,0 +1,9 @@
+	LDAA #35	
+	STAA $70
+
+	LDAB #0
+	STAB $81 
+	
+	ASRA
+		
+	END
